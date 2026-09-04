@@ -9,592 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --rust: #C45A2C;
-            --rust-light: #E87A45;
-            --rust-dark: #8B3A1A;
-            --steel: #2A2D35;
-            --steel-light: #3A3F4A;
-            --steel-dark: #1A1D23;
-            --cream: #F0EAE0;
-            --cream-dim: #D4CFC6;
-            --white: #FAFAF8;
-            --yellow: #F5C842;
-            --ice-blue: #6CB4D9;
-            --lava: #E8523A;
-            --nidget-green: #A8D5A2;
-            --nidget-pink: #F0B0A0;
-            --nidget-yellow: #F5D98A;
-            --nidget-blue: #9CC4E0;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Barlow', sans-serif;
-            background: var(--steel-dark);
-            color: var(--cream);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ===== NAV ===== */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 16px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(26, 29, 35, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(196, 90, 44, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            padding: 10px 40px;
-            background: rgba(26, 29, 35, 0.95);
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .nav-logo img {
-            height: 40px;
-            width: 40px;
-            object-fit: contain;
-        }
-
-        .nav-logo span {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-            color: var(--cream);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--cream-dim);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: var(--rust-light); }
-
-        .nav-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 8px;
-        }
-
-        .nav-hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--cream);
-            transition: all 0.3s;
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            padding: 120px 40px 80px;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse at 30% 50%, rgba(196, 90, 44, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 30%, rgba(108, 180, 217, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-logo {
-            width: 180px;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 24px;
-            animation: fadeInUp 0.8s ease both;
-            filter: drop-shadow(0 8px 32px rgba(196, 90, 44, 0.3));
-        }
-
-        .hero h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            letter-spacing: 6px;
-            color: var(--cream);
-            line-height: 1;
-            margin-bottom: 16px;
-            animation: fadeInUp 0.8s ease 0.15s both;
-        }
-
-        .hero h1 .accent { color: var(--rust-light); }
-
-        .hero-tagline {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(1rem, 2.5vw, 1.3rem);
-            color: var(--cream-dim);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 400;
-            margin-bottom: 48px;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .hero-scroll {
-            animation: fadeInUp 0.8s ease 0.5s both;
-        }
-
-        .hero-scroll a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--rust-light);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: gap 0.3s;
-        }
-
-        .hero-scroll a:hover { gap: 14px; }
-
-        .hero-scroll .arrow {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border-right: 2px solid var(--rust-light);
-            border-bottom: 2px solid var(--rust-light);
-            transform: rotate(45deg);
-            animation: bounceArrow 2s ease infinite;
-        }
-
-        @keyframes bounceArrow {
-            0%, 100% { transform: rotate(45deg) translateY(0); }
-            50% { transform: rotate(45deg) translateY(6px); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== SECTION BASICS ===== */
-        section { padding: 100px 40px; }
-
-        .section-label {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--rust-light);
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
-            letter-spacing: 3px;
-            color: var(--cream);
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-
-        /* ===== ABOUT ===== */
-        .about {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--cream-dim);
-            max-width: 700px;
-        }
-
-        .about-text p + p { margin-top: 20px; }
-
-        .about-stats {
-            display: flex;
-            gap: 48px;
-            margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid rgba(196, 90, 44, 0.2);
-        }
-
-        .stat-item .stat-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5rem;
-            color: var(--rust-light);
-            line-height: 1;
-        }
-
-        .stat-item .stat-label {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--cream-dim);
-            margin-top: 4px;
-        }
-
-        /* ===== GAME CARD ===== */
-        .game-section {
-            position: relative;
-        }
-
-        .game-card {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            border-radius: 8px;
-            overflow: hidden;
-            background: var(--steel);
-            border: 1px solid rgba(196, 90, 44, 0.15);
-        }
-
-        .game-card-media {
-            position: relative;
-            min-height: 500px;
-            overflow: hidden;
-        }
-
-        .game-card-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .game-card:hover .game-card-media img {
-            transform: scale(1.03);
-        }
-
-        .game-badge {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: var(--rust);
-            color: var(--cream);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 6px 14px;
-            border-radius: 3px;
-        }
-
-        .game-badge.coming-soon { background: var(--steel-light); }
-
-        .game-card-content {
-            padding: 48px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .game-card-content .game-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
-            letter-spacing: 2px;
-            color: var(--cream);
-            line-height: 1.1;
-            margin-bottom: 8px;
-        }
-
-        .game-card-content .game-genre {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--rust-light);
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .game-card-content .game-desc {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--cream-dim);
-            margin-bottom: 28px;
-        }
-
-        .game-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 32px;
-        }
-
-        .game-features span {
-            background: rgba(196, 90, 44, 0.1);
-            border: 1px solid rgba(196, 90, 44, 0.2);
-            color: var(--cream-dim);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 5px 12px;
-            border-radius: 3px;
-        }
-
-        .game-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 4px;
-            transition: all 0.25s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--rust);
-            color: var(--cream);
-        }
-
-        .btn-primary:hover {
-            background: var(--rust-light);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--cream-dim);
-            border: 1px solid rgba(240, 234, 224, 0.2);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--rust-light);
-            color: var(--rust-light);
-        }
-
-        .btn-steam {
-            background: #1B2838;
-            color: #C7D5E0;
-        }
-
-        .btn-steam:hover {
-            background: #2A475E;
-            transform: translateY(-1px);
-        }
-
-        /* ===== VIDEO SECTION ===== */
-        .video-embed {
-            max-width: 900px;
-            margin: 40px auto 0;
-            aspect-ratio: 16/9;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(196, 90, 44, 0.15);
-        }
-
-        .video-embed iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* ===== NIDGETS SECTION — softer palette ===== */
-        .nidgets-section {
-            background: linear-gradient(180deg, var(--steel-dark) 0%, #1E2228 50%, var(--steel-dark) 100%);
-        }
-
-        .nidgets-section .game-features span {
-            background: rgba(168, 213, 162, 0.08);
-            border-color: rgba(168, 213, 162, 0.2);
-        }
-
-        .nidgets-section .game-genre { color: var(--nidget-green); }
-        .nidgets-section .game-badge { background: var(--nidget-green); color: var(--steel-dark); }
-
-        /* ===== COMMUNITY / SOCIALS ===== */
-        .community {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .social-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: var(--steel);
-            border: 1px solid rgba(196, 90, 44, 0.15);
-            border-radius: 6px;
-            text-decoration: none;
-            color: var(--cream-dim);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.25s ease;
-        }
-
-        .social-link:hover {
-            border-color: var(--rust-light);
-            color: var(--rust-light);
-            transform: translateY(-2px);
-        }
-
-        .social-link svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid rgba(196, 90, 44, 0.1);
-        }
-
-        footer p {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(212, 207, 198, 0.4);
-        }
-
-        footer .footer-location {
-            margin-top: 6px;
-            color: rgba(212, 207, 198, 0.25);
-        }
-
-        /* ===== DIVIDER ===== */
-        .divider {
-            max-width: 1100px;
-            margin: 0 auto;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(196, 90, 44, 0.2), transparent);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
-            .game-card {
-                grid-template-columns: 1fr;
-            }
-
-            .game-card-media {
-                min-height: 300px;
-            }
-
-            .game-card-content {
-                padding: 32px;
-            }
-
-            .about-stats {
-                flex-wrap: wrap;
-                gap: 32px;
-            }
-
-            section { padding: 72px 24px; }
-            nav { padding: 12px 20px; }
-        }
-
-        @media (max-width: 600px) {
-            .nav-links { display: none; }
-            .nav-hamburger { display: flex; }
-
-            .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(26, 29, 35, 0.98);
-                padding: 24px;
-                gap: 20px;
-                border-bottom: 1px solid rgba(196, 90, 44, 0.2);
-            }
-
-            .hero { padding: 100px 24px 60px; }
-            .hero-logo { width: 120px; height: 120px; }
-
-            .social-grid { flex-direction: column; align-items: center; }
-        }
-
-        /* ===== SCROLL REVEAL ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
@@ -607,7 +22,9 @@
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#hardboiled">Hard Boiled</a></li>
+        <li><a href="#field">F.I.E.L.D.</a></li>
         <li><a href="#nidgets">Nidgets</a></li>
+        <li><a href="#tools">Tools</a></li>
         <li><a href="#community">Community</a></li>
     </ul>
     <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
@@ -631,8 +48,8 @@
         <p class="section-label">About</p>
         <h2 class="section-title">Rusty Nuts Studios</h2>
         <div class="about-text">
-            <p>Solo dev studio based in Tbilisi, Georgia. Just trying to make fun games in Unreal Engine 5. Two projects in the works right now — one where you control the weather to fight hordes of enemies, and one where passive-aggressive eggs kill each other over nothing.</p>
-            <p>Both built in UE5 with PaperZD, mixing 2D pixel art with 3D lighting because it looks cool and nobody else is really doing it.</p>
+            <p>Solo dev studio based in Tbilisi, Georgia. Just trying to make fun games in Unreal Engine 5. Three projects in the works right now — one where you control the weather to fight hordes of enemies, one where passive-aggressive eggs kill each other over nothing, and one where you are a magnet trying to climb a very tall tower with your friends attached to you.</p>
+            <p>Hard Boiled and Nidgets are built in UE5 with PaperZD, mixing 2D pixel art with 3D lighting because it looks cool and nobody else is really doing it. F.I.E.L.D. is the odd one out &mdash; full 3D, C++, and the whole game runs on Chaos physics.</p>
         </div>
     </div>
 </section>
@@ -687,6 +104,39 @@
 
 <div class="divider"></div>
 
+<!-- F.I.E.L.D. -->
+<section class="game-section field-accent" id="field">
+    <div style="max-width: 900px; margin: 0 auto 40px; text-align: center;" class="reveal">
+        <p class="section-label">Also in Development</p>
+        <h2 class="section-title">F.I.E.L.D.</h2>
+    </div>
+
+    <div class="game-card reveal">
+        <div class="game-card-media">
+            <img src="images/field-a-clamp-wall.jpg" alt="F.I.E.L.D. &mdash; a red magnetic ball clamped to a large blue charged wall, its reach ring drawn around it">
+            <div class="game-badge">Prototype</div>
+        </div>
+        <div class="game-card-content">
+            <h3 class="game-title">You're going up.<br>But you're a magnet.</h3>
+            <p class="game-genre">Co-op Rage Platformer &bull; 1&ndash;4 Players &bull; UE5 + Chaos Physics</p>
+            <p class="game-desc">Climb one enormous tower, and everybody has to reach the top or nobody finishes. You are a ball carrying a magnetic charge, and that charge is what you control: flip your pole and an opposite wall clamps you to it, so the wall becomes your floor. Match it and it throws you off. There is a jump &mdash; it's a hop. The magnet is how you climb.</p>
+            <p class="game-desc">You have been chained to your friends before. Here, what holds the party together is a magnetic field &mdash; and a field pushes as hard as it pulls.</p>
+            <div class="game-features">
+                <span>Magnetic Climbing</span>
+                <span>1&ndash;4 Player Co-op</span>
+                <span>No Checkpoints</span>
+                <span>Networked Physics</span>
+                <span>Three Modes</span>
+            </div>
+            <div class="game-actions">
+                <a href="field.html" class="btn btn-steam">More about F.I.E.L.D.</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- NIDGETS -->
 <section class="game-section nidgets-section" id="nidgets">
     <div style="max-width: 900px; margin: 0 auto 40px; text-align: center;" class="reveal">
@@ -713,6 +163,40 @@
             <div class="game-actions">
                 <a href="#community" class="btn btn-secondary">Follow for Updates</a>
             </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TOOLS -->
+<section id="tools">
+    <div style="max-width: 900px; margin: 0 auto 10px; text-align: center;" class="reveal">
+        <p class="section-label">Also from the studio</p>
+        <h2 class="section-title">Tools</h2>
+        <p class="game-desc" style="margin-top:14px;">Unreal tools built along the way, and released because other people needed them too.</p>
+    </div>
+
+    <div class="tools-grid reveal" style="max-width: 1100px; margin: 0 auto;">
+        <div class="tool-card">
+            <h4>Click Factory</h4>
+            <p>Click and UI sound generation for Unreal, in an editor tab.</p>
+            <a href="https://fab.com/listings/2264595c-03d7-4bcc-bbb8-f7aaf752d14f" target="_blank" rel="noopener">On Fab &rarr;</a>
+        </div>
+        <div class="tool-card">
+            <h4>Sci Forge</h4>
+            <p>Science-fiction sound design, generated rather than sampled.</p>
+            <a href="https://fab.com/listings/19fb0cbe-b8b9-4ad2-92b2-202549f1e5b2" target="_blank" rel="noopener">On Fab &rarr;</a>
+        </div>
+        <div class="tool-card">
+            <h4>Shot Forge</h4>
+            <p>Weapon and impact sounds, built from the physics of the thing that made them.</p>
+            <a href="https://fab.com/listings/4419cb9b-cd75-4248-b9d0-c4205ba10eab" target="_blank" rel="noopener">On Fab &rarr;</a>
+        </div>
+        <div class="tool-card">
+            <h4>Audio Utilities</h4>
+            <p>Record, edit and multiply audio without leaving the Unreal editor. Free browser versions too.</p>
+            <a href="https://tommyallenacoustics.com" target="_blank" rel="noopener">tommyallenacoustics.com &rarr;</a>
         </div>
     </div>
 </section>

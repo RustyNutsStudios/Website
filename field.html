@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F.I.E.L.D. — A Co-op Magnetic Climbing Game | Rusty Nuts Studios</title>
+<meta name="description" content="You're going up. But you're a magnet. A co-op rage platformer for 1-4 players, in development at Rusty Nuts Studios. Unreal Engine 5, Chaos physics.">
+<meta property="og:title" content="F.I.E.L.D. — You're going up. But you're a magnet.">
+<meta property="og:description" content="A co-op rage platformer for 1-4 players. Climb one enormous tower; everybody reaches the top, or nobody finishes.">
+<meta property="og:image" content="images/field-keyart.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <a href="index.html" class="nav-logo">
+        <img src="images/RustyNutsLogoSmall.png" alt="Rusty Nuts Studios">
+        <span>Rusty Nuts Studios</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#hardboiled">Hard Boiled</a></li>
+        <li><a href="field.html">F.I.E.L.D.</a></li>
+        <li><a href="index.html#nidgets">Nidgets</a></li>
+        <li><a href="index.html#tools">Tools</a></li>
+        <li><a href="index.html#community">Community</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- HERO -->
+<section class="game-section field-accent field-section" id="field-hero" style="padding-top: 140px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <img src="images/field-logo.png" alt="F.I.E.L.D." class="field-logo-img">
+        <h1 class="game-title" style="font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 18px;">
+            You're going up.<br>But you're a magnet.
+        </h1>
+        <p class="game-genre" style="font-size: 1.05rem;">Co-op Rage Platformer &bull; 1&ndash;4 Players &bull; Unreal Engine 5 &bull; In Development</p>
+        <p class="game-desc" style="max-width: 760px; margin-top: 16px;">
+            Climb one enormous tower. Everybody reaches the top, or nobody finishes.
+        </p>
+        <p class="game-desc" style="max-width: 760px;">
+            You have been chained to your friends. You have been roped, bolted and boxed in with them.
+            Here, what holds you together is a <strong>magnetic field</strong> &mdash; and a field pushes
+            as hard as it pulls.
+        </p>
+        <img src="images/field-keyart.jpg" alt="F.I.E.L.D. key art — a red ball and a blue ball joined by field lines above floating white platforms" class="field-hero-art" style="margin-top: 30px;">
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="game-section field-accent" id="how">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <p class="section-label">How it works</p>
+        <h2 class="section-title" style="margin-bottom: 20px;">You are a magnet ball.</h2>
+        <p class="game-desc" style="max-width: 780px;">
+            You are a ball carrying a magnetic charge, and that charge is what you control.
+            <strong>Flip your pole</strong> and an opposite wall clamps you to it &mdash; the wall becomes
+            your floor. Match the wall and it throws you off. <strong>Turn the strength up</strong> and you
+            reach further, so you can grab a wall across a gap. <strong>Turn it down</strong> and you tear
+            yourself off the one holding you.
+        </p>
+        <p class="game-desc" style="max-width: 780px;">
+            Red is positive. Blue is negative. Grey is neutral. You read the level by looking at it.
+            There is a jump, and a double jump with real air steering &mdash; but it's a hop. The magnet
+            is how you climb. Opposites attract and likes repel: the magnetic dipole&ndash;dipole
+            interaction, running as the thing you actually play.
+        </p>
+
+        <div class="field-poles">
+            <div class="field-pole clamp">
+                <h4>Clamped &mdash; safe</h4>
+                <p>Magnetised to a surface. You go up, and you go up slowly.</p>
+            </div>
+            <div class="field-pole repel">
+                <h4>Repel &mdash; unsafe</h4>
+                <p>Cover far more ground in one move. Nothing is holding you.</p>
+            </div>
+        </div>
+
+        <p class="game-desc" style="max-width: 780px;">
+            That choice is live every second, and one mistake in the physics can ruin a run &mdash; or
+            save it. Solo, the risk is entirely your own. With other people, communication is
+            everything, because one player's mistake spoils it for all of you. What comes out of that
+            is skill that ends up <em>feeling</em> like luck &mdash; and it feels fair, because it is only
+            physics. You own the mistakes.
+        </p>
+
+        <div class="field-shots">
+            <figure>
+                <img src="images/field-a-clamp-wall.jpg" alt="A red ball clamped to a large blue charged wall, with its reach ring drawn around it">
+                <figcaption>Clamped to a charged wall &mdash; the ring is your reach.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/field-g-repel-band.jpg" alt="Two balls held apart above a white platform, matching poles repelling">
+                <figcaption>Matching poles &mdash; held off the surface.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/field-i-4p-split.jpg" alt="Four-player split screen, four balls with overlapping red and blue field lines">
+                <figcaption>Four players, split screen, running today.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MODES -->
+<section class="game-section field-accent field-section" id="modes">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <p class="section-label">The loop</p>
+        <h2 class="section-title" style="margin-bottom: 20px;">Jump, climb, fall, try again &mdash; now with a magnet in it.</h2>
+        <p class="game-desc" style="max-width: 820px;">
+            The rage loop is established. It's proven, it's fun, and it's great in co-op. We didn't
+            invent it &mdash; what we brought is the physics. More players is not more help: it's more
+            chaos, and that's the difficulty dial. There are no checkpoints. You fall, and the height
+            you lose is the punishment &mdash; all of it.
+        </p>
+
+        <div class="field-modes">
+            <div class="field-mode">
+                <h4>The Climb</h4>
+                <p>The rage platformer. No checkpoints, no respawn.</p>
+                <span class="status">Playable today</span>
+            </div>
+            <div class="field-mode">
+                <h4>Midpoint</h4>
+                <p>The world is only solid where the team is. Drift apart and it stops being there.</p>
+                <span class="status">Built &mdash; first playtest ahead</span>
+            </div>
+            <div class="field-mode">
+                <h4>Checkpoint</h4>
+                <p>The gentler one. A fall returns you instead of costing you the climb.</p>
+                <span class="status">Specified, not yet built</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WATCH -->
+<section class="game-section field-accent" id="watch">
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <p class="section-label">Watch</p>
+        <h2 class="section-title" style="margin-bottom: 20px;">Gameplay</h2>
+
+        <!-- TODO (Tommy): replace this whole block with the YouTube embed once the video is up.
+             Paste the video ID into BOTH places marked VIDEO_ID:
+             <div class="field-embed"><iframe style="position:absolute;inset:0;width:100%;height:100%;border:0"
+               src="https://www.youtube.com/embed/VIDEO_ID" title="F.I.E.L.D. gameplay"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen></iframe></div>
+        -->
+        <div class="field-embed">
+            <div class="placeholder">
+                <strong style="font-family:'Barlow Condensed',sans-serif; letter-spacing:0.1em; text-transform:uppercase; color:#F5C842;">TODO &mdash; gameplay video</strong>
+                <span style="font-size:0.9rem; max-width:460px;">The cut isn't up yet. When it is, swap this block for the YouTube embed &mdash; the markup is in an HTML comment directly above this one.</span>
+            </div>
+        </div>
+
+        <div class="field-todo">
+            <b>TODO &mdash; Steam page</b>
+            <p>There is no Steam page for F.I.E.L.D. yet. When it exists, a “Wishlist on Steam” button goes here, matching the one on the Hard Boiled section of the home page. Until then this space stays empty rather than linking somewhere that isn't there.</p>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HONEST STATE -->
+<section class="game-section field-accent" id="state">
+    <div style="max-width: 900px; margin: 0 auto;">
+        <p class="section-label">Where it actually is</p>
+        <h2 class="section-title" style="margin-bottom: 20px;">A playable prototype &mdash; and it says so.</h2>
+
+        <p class="game-desc">
+            <strong>It is a prototype, and the world is whitebox.</strong> White boxes, a blue sky, no art
+            pass. Every screenshot on this page is a real frame from the current build, debug lines and
+            all. The mechanics, the netcode and the first pass of audio and VFX are done; the tower is
+            being built now.
+        </p>
+
+        <div class="field-honest">
+            What works today: the magnetism, all of it playable &middot; online co-op for two over Steam,
+            with physics prediction on &middot; four players in split screen on one machine &middot; the
+            ending, where the climb finishes when the whole party reaches the top &middot; a level tool
+            &middot; a headless test suite that runs against a packaged build.<br><br>
+            What isn't claimed: online is proven at <strong>two</strong> players, not four. The rule that
+            more players makes it harder is designed and specified, but switched off in the build today.
+        </div>
+
+        <p class="game-desc">
+            The simple look is on purpose. A clean, readable style is the right one for a game whose
+            subject is invisible forces made visible, and it's cheap &mdash; which is what lets the effort
+            go into the game rather than an art pipeline.
+        </p>
+
+        <div class="field-shots">
+            <figure>
+                <img src="images/field-f-maths-band.jpg" alt="The debug layer: red and blue field lines and velocity readouts drawn over the whitebox level">
+                <figcaption>The debug layer &mdash; the fields and the maths, drawn on screen.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/field-d-tower-lines.jpg" alt="Looking up the whitebox tower, a ball on a charged blue platform">
+                <figcaption>The climb, in the build today.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/field-b-big-plate.jpg" alt="A ball beneath a large dark blue charged surface">
+                <figcaption>A charged surface, seen from underneath.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="field-contact">
+    <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+        <p class="section-label">Get in touch</p>
+        <h2 class="section-title">Follow F.I.E.L.D.</h2>
+        <p class="game-desc" style="margin-top: 14px;">
+            It's being built in public. The Discord is where the work-in-progress goes first.
+        </p>
+        <div class="social-grid" style="margin-top: 26px;">
+            <a href="https://dsc.gg/rustynutsstudios" target="_blank" rel="noopener" class="social-link">Discord</a>
+            <a href="https://www.youtube.com/@RustyNutsStudios" target="_blank" rel="noopener" class="social-link">YouTube</a>
+            <a href="https://x.com/RustyNutsStudio" target="_blank" rel="noopener" class="social-link">X / Twitter</a>
+            <a href="https://www.instagram.com/rustynutsstudios" target="_blank" rel="noopener" class="social-link">Instagram</a>
+            <a href="https://www.tiktok.com/@rustynutsstudios" target="_blank" rel="noopener" class="social-link">TikTok</a>
+        </div>
+        <p class="game-desc" style="margin-top: 30px;">
+            <a href="index.html" style="color: var(--yellow); text-decoration: none; font-weight: 600;">&larr; Back to Rusty Nuts Studios</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Rusty Nuts Studios LLC. All rights reserved.</p>
+    <p>Tbilisi, Georgia</p>
+</footer>
+
+<script>
+    // Same nav behaviour as the home page.
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+    });
+</script>
+
+</body>
+</html>
