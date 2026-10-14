@@ -689,7 +689,7 @@
         .egg-page .nav-links a:hover { color: var(--egg-gold); }
         .egg-page .nav-links a[aria-current] { color: var(--egg-bone); }
 
-        .egg-hero { padding: 72px 0 0; }
+        .egg-page .egg-hero { padding: 72px 0 0; }
         .egg-hero-art { display: block; width: 100%; height: auto; }
         .egg-hero-body { max-width: 900px; margin: 0 auto; padding: 36px 24px 56px; text-align: center; }
         .egg-hero-body h1 { margin: 0; line-height: 0; }
@@ -766,7 +766,7 @@
 
         @media (max-width: 600px) {
             .egg-page section { padding: 64px 20px; }
-            .egg-hero { padding-top: 64px; }
+            .egg-page .egg-hero { padding-top: 64px; }
             .egg-hero-body { padding: 28px 20px 48px; }
             .egg-actions .btn { width: 100%; justify-content: center; padding: 14px 24px; }
         }
