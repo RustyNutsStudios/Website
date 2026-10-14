@@ -110,7 +110,7 @@
 
         /* ===== HERO ===== */
         .hero {
-            min-height: 100vh;
+            min-height: 72vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -422,6 +422,27 @@
             transform: translateY(-1px);
         }
 
+        /* A button that is not live yet: same shape, dashed, no hand cursor. */
+        .btn-wait {
+            background: transparent;
+            color: var(--cream-dim);
+            border: 1px dashed rgba(240, 234, 224, 0.35);
+            cursor: default;
+        }
+
+        /* Small text link under a card's buttons (e.g. the Nidgets demo). */
+        .game-note {
+            margin-top: 12px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--cream-dim);
+        }
+
+        .game-note a { color: var(--yellow); text-decoration: none; }
+        .game-note a:hover { text-decoration: underline; }
+
         /* ===== VIDEO SECTION ===== */
         .video-embed {
             max-width: 900px;
@@ -565,10 +586,13 @@
                 border-bottom: 1px solid rgba(196, 90, 44, 0.2);
             }
 
-            .hero { padding: 100px 24px 60px; }
+            .hero { min-height: auto; padding: 110px 24px 56px; }
             .hero-logo { width: 120px; height: 120px; }
+            .hero-tagline { margin-bottom: 32px; }
 
             .social-grid { flex-direction: column; align-items: center; }
+
+            .game-actions .btn { width: 100%; justify-content: center; padding: 14px 24px; }
         }
 
         /* ===== SCROLL REVEAL ===== */
@@ -648,3 +672,110 @@
             .field-poles, .field-modes, .field-shots { grid-template-columns: 1fr; }
             .field-logo-img { width: 76%; max-width: 300px; }
         }
+
+
+        /* ===== EGGREGIOUS — the game's own palette (newsreel black, bone, red, gold) =====
+           Used on eggregious.html (body.egg-page) and inside .egg-card on the home page,
+           so the studio's rust/steel look elsewhere is untouched. */
+        .egg-page, .egg-card {
+            --egg-black: #141210;
+            --egg-bone: #efe3c7;
+            --egg-red: #c8102e;
+            --egg-gold: #d9a441;
+        }
+
+        .egg-page { background: var(--egg-black); color: var(--egg-bone); }
+        .egg-page nav { border-bottom-color: rgba(200, 16, 46, 0.35); }
+        .egg-page .nav-links a:hover { color: var(--egg-gold); }
+        .egg-page .nav-links a[aria-current] { color: var(--egg-bone); }
+
+        .egg-hero { padding: 72px 0 0; }
+        .egg-hero-art { display: block; width: 100%; height: auto; }
+        .egg-hero-body { max-width: 900px; margin: 0 auto; padding: 36px 24px 56px; text-align: center; }
+        .egg-hero-body h1 { margin: 0; line-height: 0; }
+        .egg-wordmark { width: min(620px, 88%); height: auto; display: inline-block; margin-bottom: 20px; }
+        .egg-line {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            color: var(--egg-bone);
+        }
+        .egg-sub { color: rgba(239, 227, 199, 0.72); margin-top: 10px; font-size: 1.05rem; line-height: 1.6; }
+        .egg-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+
+        .btn-egg { background: var(--egg-bone); color: var(--egg-black); }
+        .btn-egg:hover { background: #fff6dc; transform: translateY(-1px); }
+        .egg-page .btn-wait { border-color: rgba(239, 227, 199, 0.4); color: rgba(239, 227, 199, 0.8); }
+
+        .egg-page section { padding: 88px 24px; }
+        .egg-page .section-label { color: var(--egg-gold); }
+        .egg-page .section-title { color: var(--egg-bone); margin-bottom: 18px; }
+        .egg-page .game-desc { color: rgba(239, 227, 199, 0.82); font-size: 1.05rem; line-height: 1.7; max-width: 720px; }
+        .egg-page .game-desc + .game-desc { margin-top: 16px; }
+        .egg-page .divider { background: linear-gradient(90deg, transparent, rgba(200, 16, 46, 0.55), transparent); }
+        .egg-wrap { max-width: 1100px; margin: 0 auto; }
+
+        .egg-stills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+        .egg-stills figure { margin: 0; }
+        .egg-stills img {
+            width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+            border-radius: 6px; border: 1px solid rgba(239, 227, 199, 0.15);
+        }
+        .egg-stills figcaption {
+            font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase;
+            letter-spacing: 2px; font-size: 0.8rem; color: var(--egg-gold); margin-top: 8px;
+        }
+
+        .egg-squad {
+            width: 100%; height: auto; display: block; margin-top: 30px;
+            border-radius: 8px; border: 1px solid rgba(239, 227, 199, 0.15);
+        }
+
+        .egg-trailer {
+            width: 100%; aspect-ratio: 16 / 9; margin-top: 30px; border-radius: 8px;
+            border: 1px dashed rgba(239, 227, 199, 0.3); background: rgba(239, 227, 199, 0.03);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .egg-trailer span {
+            font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase;
+            letter-spacing: 3px; color: rgba(239, 227, 199, 0.55);
+        }
+
+        .egg-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+        .egg-step {
+            background: rgba(239, 227, 199, 0.05); border: 1px solid rgba(239, 227, 199, 0.12);
+            border-radius: 8px; padding: 22px 20px;
+        }
+        .egg-step b { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--egg-red); line-height: 1; margin-bottom: 8px; }
+        .egg-step p { color: rgba(239, 227, 199, 0.85); line-height: 1.55; }
+
+        .egg-page .social-link { background: rgba(239, 227, 199, 0.05); border-color: rgba(239, 227, 199, 0.15); color: var(--egg-bone); }
+        .egg-page .social-link:hover { border-color: var(--egg-gold); color: var(--egg-gold); }
+        .egg-page footer { border-top-color: rgba(239, 227, 199, 0.1); }
+        .egg-page footer p { color: rgba(239, 227, 199, 0.4); }
+
+        /* The EGGREGIOUS card on the home page */
+        .egg-card .game-genre { color: var(--egg-gold); }
+        .egg-card .game-badge { background: var(--egg-red); }
+        .egg-card { border-color: rgba(200, 16, 46, 0.35); }
+
+        @media (max-width: 820px) {
+            .egg-stills, .egg-steps { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .egg-page section { padding: 64px 20px; }
+            .egg-hero { padding-top: 64px; }
+            .egg-hero-body { padding: 28px 20px 48px; }
+            .egg-actions .btn { width: 100%; justify-content: center; padding: 14px 24px; }
+        }
+
+        /* ===== 404 ===== */
+        .notfound {
+            min-height: 70vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            padding: 140px 24px 80px;
+        }
+        .notfound .game-desc { color: var(--cream-dim); line-height: 1.7; max-width: 520px; }
+        .notfound-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 28px; }
