@@ -789,7 +789,7 @@
             font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 2px;
             font-size: 0.8rem; color: var(--egg-gold); width: 150px; padding-top: 15px; white-space: nowrap; font-weight: 600;
         }
-        .press-table td { color: rgba(239, 227, 199, 0.88); }
+        .press-table td { color: rgba(239, 227, 199, 0.88); overflow-wrap: anywhere; }
         .press-table a { color: var(--egg-bone); }
 
         .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 28px; }
