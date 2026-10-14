@@ -1,0 +1,19 @@
+EGGREGIOUS - fact sheet (from the Steam page, 2026-10-15)
+
+Title: EGGREGIOUS
+Developer: Tommy Allen (Rusty Nuts Studios)
+Publisher: Rusty Nuts Studios LLC
+Studio: Rusty Nuts Studios, solo studio, Tbilisi, Georgia. Unreal Engine 5.
+In one line: Recruit an elite team of specialists and hold the line against a horde of thousands.
+What it is: a top-down Soviet sci-fi survivors roguelite.
+Genre: Action, Indie. Single-player.
+Platform: Windows PC, on Steam.
+Playtest: opening October 2026, invites through Discord.
+Release: to be announced.
+Steam: https://store.steampowered.com/app/4036510/EGGREGIOUS/
+Website: https://rustynutsstudios.com/eggregious.html
+Press kit: https://rustynutsstudios.com/press.html
+Contact: Discord https://dsc.gg/rustynutsstudios  or X https://x.com/RustyNutsStudio
+
+Folders: logo/ (studio logo, EGGREGIOUS wordmark, icon), capsules/ (the Steam capsule set and library hero),
+screenshots/ (seven 1920x1080 stills), posters/ (three recruitment posters, 4:5 and 16:9).

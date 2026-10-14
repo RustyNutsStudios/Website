@@ -771,6 +771,51 @@
             .egg-actions .btn { width: 100%; justify-content: center; padding: 14px 24px; }
         }
 
+        /* ===== PRESS KIT (press.html, on top of .egg-page) ===== */
+        .press-head { padding: 120px 24px 40px; text-align: center; }
+        .press-head .egg-wordmark { width: min(420px, 80%); margin-bottom: 14px; }
+        .press-head h1 {
+            font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 6vw, 4rem);
+            letter-spacing: 3px; line-height: 1; color: var(--egg-bone); margin: 0 0 12px;
+        }
+        .press-head .game-desc { margin: 0 auto; }
+
+        .press-table { width: 100%; max-width: 900px; border-collapse: collapse; margin-top: 24px; }
+        .press-table th, .press-table td {
+            text-align: left; vertical-align: top; padding: 12px 14px 12px 0;
+            border-bottom: 1px solid rgba(239, 227, 199, 0.12); font-size: 1rem; line-height: 1.55;
+        }
+        .press-table th {
+            font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 2px;
+            font-size: 0.8rem; color: var(--egg-gold); width: 150px; padding-top: 15px; white-space: nowrap; font-weight: 600;
+        }
+        .press-table td { color: rgba(239, 227, 199, 0.88); }
+        .press-table a { color: var(--egg-bone); }
+
+        .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 28px; }
+        .press-item {
+            background: rgba(239, 227, 199, 0.04); border: 1px solid rgba(239, 227, 199, 0.12);
+            border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;
+        }
+        .press-item img { width: 100%; height: auto; display: block; background: #0d0c0a; }
+        .press-item .meta { padding: 12px 14px 14px; }
+        .press-item .meta b {
+            display: block; color: var(--egg-bone); font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.95rem;
+        }
+        .press-item .meta span { display: block; color: rgba(239, 227, 199, 0.6); font-size: 0.85rem; margin-top: 2px; }
+        .press-item .meta a {
+            display: inline-block; margin: 8px 14px 0 0; color: var(--egg-gold);
+            text-decoration: none; font-weight: 600; font-size: 0.9rem;
+        }
+        .press-item .meta a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .press-head { padding: 96px 20px 32px; }
+            .press-table th { width: 104px; }
+            .press-table th, .press-table td { padding-right: 8px; font-size: 0.95rem; }
+        }
+
         /* ===== 404 ===== */
         .notfound {
             min-height: 70vh; display: flex; flex-direction: column;
