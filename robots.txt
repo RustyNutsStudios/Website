@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /hardboiled.html
+
+Sitemap: https://rustynutsstudios.com/sitemap.xml
