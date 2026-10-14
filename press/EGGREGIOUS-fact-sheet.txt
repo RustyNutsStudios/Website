@@ -13,7 +13,7 @@ Release: to be announced.
 Steam: https://store.steampowered.com/app/4036510/EGGREGIOUS/
 Website: https://rustynutsstudios.com/eggregious.html
 Press kit: https://rustynutsstudios.com/press.html
-Contact: Discord https://dsc.gg/rustynutsstudios  or X https://x.com/RustyNutsStudio
+Contact: @RustyNutsStudio on X, https://x.com/RustyNutsStudio
 
 Folders: logo/ (studio logo, EGGREGIOUS wordmark, icon), capsules/ (the Steam capsule set and library hero),
 screenshots/ (seven 1920x1080 stills), posters/ (three recruitment posters, 4:5 and 16:9).
