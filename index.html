@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rusty Nuts Studios — Indie Game Dev | Tbilisi, Georgia</title>
-    <meta name="description" content="Rusty Nuts Studios builds bold indie games in Unreal Engine 5. Home of Hard Boiled Climate Change and Nidgets.">
+    <meta name="description" content="Rusty Nuts Studios builds bold indie games in Unreal Engine 5. Home of EGGREGIOUS, Nidgets and F.I.E.L.D.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- Old links to the Hard Boiled section land on the EGGREGIOUS page. -->
+    <script>if (location.hash === '#hardboiled') { location.replace('eggregious.html'); }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,14 +18,14 @@
 <!-- NAV -->
 <nav id="navbar">
     <a href="#" class="nav-logo">
-        <img src="images/RustyNutsLogoSmall.png" alt="Rusty Nuts Studios">
+        <img src="images/RustyNutsLogoSmall.png" width="80" height="80" alt="Rusty Nuts Studios">
         <span>Rusty Nuts Studios</span>
     </a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#hardboiled">Hard Boiled</a></li>
-        <li><a href="#field">F.I.E.L.D.</a></li>
+        <li><a href="eggregious.html">EGGREGIOUS</a></li>
         <li><a href="#nidgets">Nidgets</a></li>
+        <li><a href="#field">F.I.E.L.D.</a></li>
         <li><a href="#tools">Tools</a></li>
         <li><a href="#community">Community</a></li>
     </ul>
@@ -34,11 +36,11 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-    <img src="images/RustyNutsLogoBig.png" alt="Rusty Nuts Studios" class="hero-logo">
+    <img src="images/RustyNutsLogoBig.png" width="360" height="360" alt="Rusty Nuts Studios" class="hero-logo">
     <h1>RUSTY <span class="accent">NUTS</span> STUDIOS</h1>
     <p class="hero-tagline">Indie Games &bull; Unreal Engine 5 &bull; Tbilisi, Georgia</p>
     <div class="hero-scroll">
-        <a href="#about">See our games <span class="arrow"></span></a>
+        <a href="#eggregious">See our games <span class="arrow"></span></a>
     </div>
 </section>
 
@@ -48,88 +50,39 @@
         <p class="section-label">About</p>
         <h2 class="section-title">Rusty Nuts Studios</h2>
         <div class="about-text">
-            <p>Solo dev studio based in Tbilisi, Georgia. Just trying to make fun games in Unreal Engine 5. Three projects in the works right now — one where you control the weather to fight hordes of enemies, one where passive-aggressive eggs kill each other over nothing, and one where you are a magnet trying to climb a very tall tower with your friends attached to you.</p>
-            <p>Hard Boiled and Nidgets are built in UE5 with PaperZD, mixing 2D pixel art with 3D lighting because it looks cool and nobody else is really doing it. F.I.E.L.D. is the odd one out &mdash; full 3D, C++, and the whole game runs on Chaos physics.</p>
+            <p>Solo dev studio based in Tbilisi, Georgia. Just trying to make fun games in Unreal Engine 5. Three projects in the works right now — one where a squad of six holds the line against a horde of thousands, one where passive-aggressive eggs kill each other over nothing, and one where you are a magnet trying to climb a very tall tower with your friends attached to you.</p>
+            <p>EGGREGIOUS and Nidgets are built in UE5 with PaperZD, mixing 2D pixel art with 3D lighting because it looks cool and nobody else is really doing it. F.I.E.L.D. is the odd one out &mdash; full 3D, C++, and the whole game runs on Chaos physics.</p>
         </div>
     </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- HARD BOILED CLIMATE CHANGE -->
-<section class="game-section" id="hardboiled">
+<!-- EGGREGIOUS -->
+<section class="game-section" id="eggregious">
     <div style="max-width: 900px; margin: 0 auto 40px; text-align: center;" class="reveal">
-        <p class="section-label">Featured Title</p>
-        <h2 class="section-title">Hard Boiled Climate Change</h2>
+        <p class="section-label">Playtest opening this week</p>
+        <h2 class="section-title">EGGREGIOUS</h2>
     </div>
 
-    <div class="game-card reveal">
+    <div class="game-card egg-card reveal">
         <div class="game-card-media">
-            <img src="images/HArdBoiledPage_Background.jpg" alt="Hard Boiled Climate Change — egg warrior between ice and lava">
-            <div class="game-badge">In Development</div>
+            <img src="images/eggregious/capsule-vertical-748.jpg" width="748" height="896" alt="EGGREGIOUS — the squad of Soviet-style figures in front of a red sunburst, a wall of bugs below">
+            <div class="game-badge">Playtest</div>
         </div>
         <div class="game-card-content">
-            <h3 class="game-title">Control the Weather.<br>Dominate the Horde.</h3>
-            <p class="game-genre">Top-Down Horde Arena Shooter &bull; 2.5D &bull; UE5 + PaperZD</p>
-            <p class="game-desc">A horde arena shooter where you control the weather to dominate the battlefield. Set rain, wind, temperature, and visibility before each wave — the battlefield transforms, the horde adapts, and every weapon synergy shifts. Over 30 interconnected weather controls, 50 unlockable characters, and a cascade system where changing one condition changes everything.</p>
-            <div class="game-features">
-                <span>Dynamic Weather System</span>
-                <span>50 Characters</span>
-                <span>Weapon Synergies</span>
-                <span>Wave Survival</span>
-                <span>Pixel Art + 3D Lighting</span>
-            </div>
+            <h3 class="game-title">Hold the line.</h3>
+            <p class="game-genre">Survivors-like &bull; One player &bull; Pixel Art &bull; UE5</p>
+            <p class="game-desc">Recruit an elite team of specialists and hold the line against a horde of thousands. Six Soviet-style figures: pick one, and the rest are the team behind you. The horde does not stop. Neither does the storm.</p>
             <div class="game-actions">
-                <a href="https://store.steampowered.com/app/4036510/Hard_Boiled_Climate_Change/" target="_blank" rel="noopener" class="btn btn-steam">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.17 14.93l-3.07-1.27c.25.93.84 1.72 1.68 2.2 1.82 1.05 4.15.42 5.2-1.4.5-.87.62-1.88.33-2.83-.29-.95-.96-1.73-1.83-2.23-1.82-1.05-4.13-.43-5.19 1.38l3.14 1.3c.73.3 1.08 1.15.78 1.88-.3.73-1.14 1.08-1.88.78l.84.19zM18 12c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 1.66.67 3.16 1.76 4.24l2.13.88C10.61 16.41 11.28 16 12 16c1.1 0 2 .9 2 2 0 .72-.41 1.39-1.12 1.71l.88.36C16.44 18.93 18 15.69 18 12z"/></svg>
+                <!-- PLAY THE TEST: placeholder until the website Discord invite exists. Then:
+                     <a href="https://discord.gg/INVITE" target="_blank" rel="noopener" class="btn btn-primary">PLAY THE TEST</a> -->
+                <span class="btn btn-wait">PLAY THE TEST: invites open this week</span>
+                <a href="https://store.steampowered.com/app/4036510/EGGREGIOUS/?utm_source=website&utm_medium=web&utm_campaign=playtest" target="_blank" rel="noopener" class="btn btn-steam">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.17 14.93l-3.07-1.27c.25.93.84 1.72 1.68 2.2 1.82 1.05 4.15.42 5.2-1.4.5-.87.62-1.88.33-2.83-.29-.95-.96-1.73-1.83-2.23-1.82-1.05-4.13-.43-5.19 1.38l3.14 1.3c.73.3 1.08 1.15.78 1.88-.3.73-1.14 1.08-1.88.78l.84.19zM18 12c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 1.66.67 3.16 1.76 4.24l2.13.88C10.61 16.41 11.28 16 12 16c1.1 0 2 .9 2 2 0 .72-.41 1.39-1.12 1.71l.88.36C16.44 18.93 18 15.69 18 12z"/></svg>
                     Wishlist on Steam
                 </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Trailer -->
-    <div class="reveal">
-        <div style="max-width: 900px; margin: 48px auto 0; text-align: center;">
-            <p class="section-label">Dev Trailer</p>
-        </div>
-        <div class="video-embed" style="position: relative; cursor: pointer;" id="videoContainer" onclick="loadVideo()">
-            <img src="https://img.youtube.com/vi/2PGXMQKByhM/maxresdefault.jpg" alt="Hard Boiled Climate Change Dev Trailer" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='https://img.youtube.com/vi/2PGXMQKByhM/hqdefault.jpg'">
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);transition:background 0.2s;" onmouseover="this.style.background='rgba(0,0,0,0.15)'" onmouseout="this.style.background='rgba(0,0,0,0.3)'">
-                <svg width="72" height="72" viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(196,90,44,0.9)"/><polygon points="28,20 28,52 54,36" fill="#F0EAE0"/></svg>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- F.I.E.L.D. -->
-<section class="game-section field-accent" id="field">
-    <div style="max-width: 900px; margin: 0 auto 40px; text-align: center;" class="reveal">
-        <p class="section-label">Also in Development</p>
-        <h2 class="section-title">F.I.E.L.D.</h2>
-    </div>
-
-    <div class="game-card reveal">
-        <div class="game-card-media">
-            <img src="images/field-a-clamp-wall.jpg" alt="F.I.E.L.D. &mdash; a red magnetic ball clamped to a large blue charged wall, its reach ring drawn around it">
-            <div class="game-badge">Prototype</div>
-        </div>
-        <div class="game-card-content">
-            <h3 class="game-title">You're going up.<br>But you're a magnet.</h3>
-            <p class="game-genre">Co-op Rage Platformer &bull; 1&ndash;4 Players &bull; UE5 + Chaos Physics</p>
-            <p class="game-desc">Climb one enormous tower, and everybody has to reach the top or nobody finishes. You are a ball carrying a magnetic charge, and that charge is what you control: flip your pole and an opposite wall clamps you to it, so the wall becomes your floor. Match it and it throws you off. There is a jump &mdash; it's a hop. The magnet is how you climb.</p>
-            <p class="game-desc">You have been chained to your friends before. Here, what holds the party together is a magnetic field &mdash; and a field pushes as hard as it pulls.</p>
-            <div class="game-features">
-                <span>Magnetic Climbing</span>
-                <span>1&ndash;4 Player Co-op</span>
-                <span>No Checkpoints</span>
-                <span>Networked Physics</span>
-                <span>Three Modes</span>
-            </div>
-            <div class="game-actions">
-                <a href="field.html" class="btn btn-steam">More about F.I.E.L.D.</a>
+                <a href="eggregious.html" class="btn btn-secondary">More about EGGREGIOUS</a>
             </div>
         </div>
     </div>
@@ -146,7 +99,7 @@
 
     <div class="game-card reveal">
         <div class="game-card-media">
-            <img src="images/NidgetsLibrary_Capsule__1_.jpg" alt="Nidgets — egg characters in a colorful world">
+            <img src="images/NidgetsLibrary_Capsule__1_.jpg" width="600" height="900" alt="Nidgets — egg characters in a colorful world">
         </div>
         <div class="game-card-content">
             <h3 class="game-title">Find Your Inner Peace<br>With Mindless Violence.</h3>
@@ -161,7 +114,45 @@
                 <span>Zero Skill Required</span>
             </div>
             <div class="game-actions">
+                <a href="https://store.steampowered.com/app/4376220/" target="_blank" rel="noopener" class="btn btn-steam">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.17 14.93l-3.07-1.27c.25.93.84 1.72 1.68 2.2 1.82 1.05 4.15.42 5.2-1.4.5-.87.62-1.88.33-2.83-.29-.95-.96-1.73-1.83-2.23-1.82-1.05-4.13-.43-5.19 1.38l3.14 1.3c.73.3 1.08 1.15.78 1.88-.3.73-1.14 1.08-1.88.78l.84.19zM18 12c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 1.66.67 3.16 1.76 4.24l2.13.88C10.61 16.41 11.28 16 12 16c1.1 0 2 .9 2 2 0 .72-.41 1.39-1.12 1.71l.88.36C16.44 18.93 18 15.69 18 12z"/></svg>
+                    Nidgets on Steam
+                </a>
                 <a href="#community" class="btn btn-secondary">Follow for Updates</a>
+            </div>
+            <p class="game-note">Try it first: <a href="https://store.steampowered.com/app/5362610/" target="_blank" rel="noopener">the free demo on Steam</a></p>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- F.I.E.L.D. -->
+<section class="game-section field-accent" id="field">
+    <div style="max-width: 900px; margin: 0 auto 40px; text-align: center;" class="reveal">
+        <p class="section-label">Also in Development</p>
+        <h2 class="section-title">F.I.E.L.D.</h2>
+    </div>
+
+    <div class="game-card reveal">
+        <div class="game-card-media">
+            <img src="images/field-a-clamp-wall.jpg" width="1100" height="618" alt="F.I.E.L.D. &mdash; a red magnetic ball clamped to a large blue charged wall, its reach ring drawn around it">
+            <div class="game-badge">Prototype</div>
+        </div>
+        <div class="game-card-content">
+            <h3 class="game-title">You're going up.<br>But you're a magnet.</h3>
+            <p class="game-genre">Co-op Rage Platformer &bull; 1&ndash;4 Players &bull; UE5 + Chaos Physics</p>
+            <p class="game-desc">Climb one enormous tower, and everybody has to reach the top or nobody finishes. You are a ball carrying a magnetic charge, and that charge is what you control: flip your pole and an opposite wall clamps you to it, so the wall becomes your floor. Match it and it throws you off. There is a jump &mdash; it's a hop. The magnet is how you climb.</p>
+            <p class="game-desc">You have been chained to your friends before. Here, what holds the party together is a magnetic field &mdash; and a field pushes as hard as it pulls.</p>
+            <div class="game-features">
+                <span>Magnetic Climbing</span>
+                <span>1&ndash;4 Player Co-op</span>
+                <span>No Checkpoints</span>
+                <span>Networked Physics</span>
+                <span>Three Modes</span>
+            </div>
+            <div class="game-actions">
+                <a href="field.html" class="btn btn-steam">More about F.I.E.L.D.</a>
             </div>
         </div>
     </div>
@@ -242,14 +233,6 @@
 </footer>
 
 <script>
-    // Load YouTube video on click (avoids embed errors and improves page load)
-    function loadVideo() {
-        const container = document.getElementById('videoContainer');
-        container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/2PGXMQKByhM?autoplay=1&rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>';
-        container.onclick = null;
-        container.style.cursor = 'default';
-    }
-
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
