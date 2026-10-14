@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — Rusty Nuts Studios</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Root-absolute paths: GitHub Pages serves this file at any missing URL, including nested ones. -->
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<nav id="navbar">
+    <a href="/" class="nav-logo">
+        <img src="/images/RustyNutsLogoSmall.png" width="80" height="80" alt="Rusty Nuts Studios">
+        <span>Rusty Nuts Studios</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html#about">About</a></li>
+        <li><a href="/eggregious.html">EGGREGIOUS</a></li>
+        <li><a href="/index.html#nidgets">Nidgets</a></li>
+        <li><a href="/field.html">F.I.E.L.D.</a></li>
+        <li><a href="/index.html#tools">Tools</a></li>
+        <li><a href="/index.html#community">Community</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<section class="notfound">
+    <p class="section-label">404</p>
+    <h1 class="section-title">That page is not here.</h1>
+    <p class="game-desc">It may have moved. The games have not.</p>
+    <div class="notfound-links">
+        <a href="/eggregious.html" class="btn btn-primary">EGGREGIOUS</a>
+        <a href="/index.html#nidgets" class="btn btn-secondary">Nidgets</a>
+        <a href="/field.html" class="btn btn-secondary">F.I.E.L.D.</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Rusty Nuts Studios LLC. All rights reserved.</p>
+    <p class="footer-location">Tbilisi, Georgia</p>
+</footer>
+
+<script>
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+</script>
+
+</body>
+</html>
