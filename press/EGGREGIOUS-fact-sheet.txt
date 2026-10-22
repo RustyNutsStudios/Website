@@ -1,4 +1,4 @@
-EGGREGIOUS - fact sheet (from the Steam page, 2026-10-15)
+EGGREGIOUS - fact sheet (Steam page facts as of 2026-10-15; the playtest and contact lines are the studio's own)
 
 Title: EGGREGIOUS
 Developer: Tommy Allen (Rusty Nuts Studios)
@@ -8,7 +8,7 @@ In one line: Recruit an elite team of specialists and hold the line against a ho
 What it is: a top-down Soviet sci-fi survivors roguelite.
 Genre: Action, Indie. Single-player.
 Platform: Windows PC, on Steam.
-Playtest: opening October 2026, invites through Discord.
+Playtest: through Steam Playtest, access in waves. The community is on Discord.
 Release: to be announced.
 Steam: https://store.steampowered.com/app/4036510/EGGREGIOUS/
 Website: https://rustynutsstudios.com/eggregious.html
