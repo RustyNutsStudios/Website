@@ -871,6 +871,61 @@
         .post p + p { margin-top: 14px; }
         .post .back { display: inline-block; margin-top: 20px; color: var(--egg-gold); text-decoration: none; font-weight: 600; }
 
+        /* ===== LOCALISED EGGREGIOUS PAGES + MEDIA KIT (built by tools/i18n/build_pages.py) ===== */
+        .lang-switch {
+            list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 8px; margin: 0 auto 24px; padding: 0;
+        }
+        .lang-switch { align-items: stretch; }
+        .lang-switch a {
+            display: flex; align-items: center; min-height: 42px; line-height: 1.3; padding: 6px 14px; border: 1px solid rgba(239, 227, 199, 0.25);
+            border-radius: 4px; color: var(--egg-bone); text-decoration: none; font-size: 0.95rem;
+        }
+        .lang-switch a:hover { border-color: var(--egg-gold); color: var(--egg-gold); }
+        .lang-switch a[aria-current] { background: var(--egg-bone); color: var(--egg-black); border-color: var(--egg-bone); font-weight: 700; }
+
+        .i18n-page:lang(ru) { font-family: 'Noto Sans', 'Segoe UI', Arial, sans-serif; }
+        .i18n-page:lang(zh) { font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif; }
+        .i18n-page:lang(ja) { font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif; }
+        .i18n-page:lang(zh) .btn, .i18n-page:lang(ja) .btn { letter-spacing: 1px; text-transform: none; }
+
+        .i18n-page section { padding: 56px 24px; }
+        .i18n-page .i18n-hero { padding: 92px 24px 0; text-align: center; }
+        .i18n-hero-img { display: block; width: min(840px, 100%); height: auto; margin: 0 auto; border-radius: 8px; }
+        .i18n-hero-body { max-width: 760px; margin: 0 auto; padding: 24px 0 40px; }
+        .i18n-short { font-size: 1.15rem; line-height: 1.8; color: var(--egg-bone); text-align: left; margin: 8px 0 26px; }
+
+        .i18n-wrap { max-width: 760px; margin: 0 auto; }
+        .i18n-about ul { list-style: none; padding: 0; margin: 18px 0 8px; }
+        .i18n-about li {
+            padding: 14px 16px 14px 18px; margin: 0 0 12px; border-left: 3px solid var(--egg-red);
+            background: rgba(239, 227, 199, 0.04); border-radius: 0 6px 6px 0;
+        }
+        .i18n-about li p { line-height: 1.8; color: rgba(239, 227, 199, 0.9); font-size: 1.02rem; }
+        .i18n-about strong { color: var(--egg-gold); letter-spacing: 0.5px; }
+        .i18n-gif { margin: 28px 0 10px; }
+        .i18n-gif img { display: block; width: 100%; height: auto; max-width: 616px; margin: 0 auto; border-radius: 6px; border: 1px solid rgba(239, 227, 199, 0.15); }
+        .i18n-victory { font-weight: 700; font-size: 1.35rem; margin-top: 26px; text-align: center; color: var(--egg-bone); letter-spacing: 1px; }
+
+        .i18n-shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+        .i18n-shots img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-radius: 6px; border: 1px solid rgba(239, 227, 199, 0.15); }
+        .i18n-video { display: block; width: 100%; max-width: 960px; height: auto; aspect-ratio: 16 / 9; margin: 0 auto; background: #000; border-radius: 8px; border: 1px solid rgba(239, 227, 199, 0.15); }
+
+        .press-head-capsule { display: block; width: min(560px, 100%); height: auto; margin: 0 auto 22px; border-radius: 8px; }
+        .kit-wrap { text-align: center; }
+        .kit-wrap .game-desc { margin: 0 auto; }
+        .kit-actions .btn .meta { opacity: 0.6; font-weight: 600; letter-spacing: 1px; margin-left: 10px; }
+        .kit-note { margin-top: 22px !important; font-size: 0.95rem !important; color: rgba(239, 227, 199, 0.6) !important; }
+        .i18n-foot a { color: rgba(239, 227, 199, 0.6); text-decoration: none; }
+        .i18n-foot a:hover { color: var(--egg-gold); }
+
+        @media (max-width: 600px) {
+            .i18n-page .i18n-hero { padding: 84px 16px 0; }
+            .i18n-short { font-size: 1.05rem; }
+            .i18n-page section { padding: 44px 20px; }
+            .lang-switch a { padding: 9px 12px; }
+        }
+
         /* ===== 404 ===== */
         .notfound {
             min-height: 70vh; display: flex; flex-direction: column;
