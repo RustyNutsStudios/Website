@@ -163,6 +163,13 @@ for f in EGG_PAGES + LOCAL_PAGES:
     if f in vis and re.search(r"this week|opening soon|opens in", vis[f], re.I):
         fail(f"{f}: dated or timed wording")
 
+# ---- the home About paragraph describes EGGREGIOUS in the words of the locked short ----
+if "index.html" in raw:
+    if "squad of six" in raw["index.html"] or "horde of thousands" in raw["index.html"]:
+        fail("index.html: the old EGGREGIOUS description (squad of six / horde of thousands) is still in the About paragraph")
+    if "an elite team of shock troops holds the line against thousands of bugs" not in raw["index.html"]:
+        fail("index.html: the About paragraph does not carry the approved clause")
+
 # ---- old EGGREGIOUS pictures must not creep back onto any page ----
 for f in pages:
     if "capsule-vertical-748.jpg" in raw[f]:
