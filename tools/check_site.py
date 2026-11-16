@@ -167,6 +167,8 @@ for f in EGG_PAGES + LOCAL_PAGES:
 for f in pages:
     if "capsule-vertical-748.jpg" in raw[f]:
         fail(f"{f}: the old vertical capsule is still used (use images/eggregious/i18n/press-vertical-capsule.jpg)")
+    if "images/eggregious/wordmark.png" in raw[f]:
+        fail(f"{f}: the old wordmark picture is still used (use the current capsule)")
 
 # ---- FAQ and press: locked English short in, old Steam line out, current capsule in ----
 EN_SHORT = L.read_store(L.BY_CODE["en"])[0]
