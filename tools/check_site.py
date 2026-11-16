@@ -163,6 +163,11 @@ for f in EGG_PAGES + LOCAL_PAGES:
     if f in vis and re.search(r"this week|opening soon|opens in", vis[f], re.I):
         fail(f"{f}: dated or timed wording")
 
+# ---- old EGGREGIOUS pictures must not creep back onto any page ----
+for f in pages:
+    if "capsule-vertical-748.jpg" in raw[f]:
+        fail(f"{f}: the old vertical capsule is still used (use images/eggregious/i18n/press-vertical-capsule.jpg)")
+
 # ---- FAQ and press: locked English short in, old Steam line out, current capsule in ----
 EN_SHORT = L.read_store(L.BY_CODE["en"])[0]
 for f in ("faq.html", "press.html"):
