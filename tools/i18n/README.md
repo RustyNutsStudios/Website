@@ -32,7 +32,7 @@ Replace the file in `store/`, then run steps 2 to 4. The check fails if a page s
 
 `tools/playtest.json` has one setting, `"open"`. While it is `false` the site is true: no Discord link, no Request Access line, no playtest wording, and the only call to action is Wishlist on Steam, on all seven pages and on the FAQ, devlog, press and home pages. To open the playtest set it to `true`, run `python tools/playtest_switch.py`, then `python tools/check_site.py`, and commit the result as one small commit.
 
-Open brings back the "Join the Discord" button (invite in `i18n_lib.py`), the footer Discord link, on the English page the three playtest steps with the Steam Request Access line, and the playtest FAQ answers. **The Chinese page never shows Discord, open or closed** (Discord is blocked in mainland China): it is Steam only.
+Open brings back the "Join the Discord" button (invite in `i18n_lib.py`), the footer Discord link, the home page's Community Discord link (the invite of record, never the old dsc.gg vanity, and its intro sentence says "join the Discord" again), on the English page the three playtest steps with the Steam Request Access line, and the playtest FAQ answers. The home card always carries the locked English short description. **The Chinese page never shows Discord, open or closed** (Discord is blocked in mainland China): it is Steam only.
 
 ## Rules baked into the check
 

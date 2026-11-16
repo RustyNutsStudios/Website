@@ -140,7 +140,7 @@ else:
             fail(f"{f}: Discord invite present while the playtest is closed")
         if re.search(r"Request Access", s):
             fail(f"{f}: Request Access present while the playtest is closed")
-        if f != "index.html" and re.search(r"discord", s, re.I):
+        if re.search(r"discord", s, re.I):
             fail(f"{f}: the word Discord present while the playtest is closed")
         if re.search(r"[Pp]laytest", s):
             fail(f"{f}: playtest wording present while the playtest is closed")
@@ -155,6 +155,8 @@ for f in pages:
         fail(f"{f}: the old button wording PLAY THE TEST is still there")
 if "eggregious-zh.html" in raw and re.search(r"discord", raw["eggregious-zh.html"], re.I):
     fail("eggregious-zh.html: Discord appears (the Chinese page never shows Discord, switch on or off)")
+if "index.html" in raw and "dsc.gg" in raw["index.html"]:
+    fail("index.html: the dead Discord vanity dsc.gg is linked (use the invite of record, and only while the switch is open)")
 for f in EGG_PAGES + LOCAL_PAGES:
     if f in raw and re.search(r"\bkeys?\b", re.sub(r"<!--.*?-->", "", raw[f], flags=re.S), re.I):
         fail(f"{f}: the word key/keys appears")
@@ -171,6 +173,11 @@ for f in ("faq.html", "press.html"):
     need(f, "images/eggregious/i18n/capsule-en.jpg", "the current capsule")
     if "wordmark.png" in raw.get(f, ""):
         fail(f"{f}: the old wordmark picture is still used")
+if "index.html" in raw:
+    if "Six Soviet-style figures" in raw["index.html"] or "Recruit an elite team of specialists" in raw["index.html"]:
+        fail("index.html: the old card text is still there")
+    if EN_SHORT not in htmllib.unescape(raw["index.html"]):
+        fail("index.html: the home card does not carry the locked English short description")
 for f in ("faq.html",):
     if '<img src="images/eggregious/capsule-1232.jpg' in raw.get(f, "") or "capsule-1232.jpg" in raw.get(f, ""):
         fail(f"{f}: the old capsule is still referenced")

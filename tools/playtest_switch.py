@@ -126,6 +126,10 @@ FAQ_DEMO_CLOSED = """<details class="faq" id="demo">
 </details>"""
 
 
+COMMUNITY_P = '''<p style="color: var(--cream-dim); max-width: 500px; margin: 0 auto; line-height: 1.7;">%s</p>'''
+COMMUNITY_DISCORD = (HERE / "i18n" / "templates" / "community-discord.html").read_text(encoding="utf-8")
+
+
 def variants(open_):
     """{region name: text} for the current state. Empty string means the region is empty."""
     return {
@@ -133,6 +137,12 @@ def variants(open_):
         "play-primary": play("btn-primary") if open_ else "",
         "index-label": '<p class="section-label">Playtest on Discord</p>' if open_ else '<p class="section-label">In Development</p>',
         "index-badge": '<div class="game-badge">Playtest</div>' if open_ else '<div class="game-badge">In Development</div>',
+        # the card carries the locked English short description as written (the same in both states)
+        "index-card-desc": '<p class="game-desc">' + html.escape(L.read_store(L.BY_CODE["en"])[0], quote=False) + "</p>",
+        # the Community block: the Discord link uses the invite of record and exists only while the switch is open
+        "index-community-text": COMMUNITY_P % ("We're building in public. Follow along, join the Discord, or just watch from a distance. No spam." if open_
+                                               else "We're building in public. Follow along, or just watch from a distance. No spam."),
+        "index-community-link": COMMUNITY_DISCORD.replace("{DISCORD}", L.DISCORD).rstrip("\n") if open_ else "",
         "faq-head-a": ('<title>EGGREGIOUS FAQ — what it is, when, platforms, the playtest</title>\n'
                        '<meta name="description" content="Twelve questions about EGGREGIOUS: what it is, when it is out, price, platforms, controller support, the playtest and how to join it, system specs, the demo, streaming, who makes it, where to follow.">') if open_ else
                       ('<title>EGGREGIOUS FAQ — what it is, when, platforms, price</title>\n'
