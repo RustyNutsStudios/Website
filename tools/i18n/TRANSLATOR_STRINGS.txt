@@ -1,0 +1,6 @@
+Interface strings still without an approved translation (English shows until they are sent):
+
+  none: every language has every string (zh discord_join is empty on purpose).
+
+Language names are used as written (autonyms): English, Русский, 简体中文, 日本語, Deutsch, Español, Português (Brasil)
+Image alt text on the localised pages is the game name only: EGGREGIOUS.

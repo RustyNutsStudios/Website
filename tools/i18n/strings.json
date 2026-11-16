@@ -1,0 +1,174 @@
+{
+  "_note": "Interface strings for the localised EGGREGIOUS pages and media kits. Only the English values are written. A language with no value falls back to English and shows up in the translator list printed by build_pages.py. The store text (short description and About) is NOT here: it is the approved Steam text in tools/i18n/store/ and is never edited.",
+  "wishlist": {
+    "en": "Wishlist on Steam",
+    "ru": "В желаемое в Steam",
+    "zh": "加入Steam愿望单",
+    "ja": "Steamでウィッシュリストに追加",
+    "de": "Zur Steam-Wunschliste",
+    "es": "Añadir a deseados en Steam",
+    "pt-br": "Lista de desejos na Steam"
+  },
+  "discord_join": {
+    "en": "Join the Discord",
+    "ru": "Вступить в Discord",
+    "zh": "",
+    "ja": "Discordに参加",
+    "de": "Dem Discord beitreten",
+    "es": "Únete al Discord",
+    "pt-br": "Entre no Discord"
+  },
+  "kit_heading": {
+    "en": "Media kit",
+    "ru": "Пресс-кит",
+    "zh": "媒体资料包",
+    "ja": "プレスキット",
+    "de": "Pressekit",
+    "es": "Kit de prensa",
+    "pt-br": "Kit de imprensa"
+  },
+  "kit_usage": {
+    "en": "Creators may use everything in this kit in their videos and posts.",
+    "ru": "Авторы могут использовать всё из этого пресс-кита в своих видео и постах.",
+    "zh": "创作者可在视频和帖子中使用本资料包中的全部内容。",
+    "ja": "このキットの素材はすべて、クリエイターの動画や投稿に使用できます。",
+    "de": "Creator dürfen alles aus diesem Kit in ihren Videos und Beiträgen verwenden.",
+    "es": "Los creadores pueden usar todo lo que hay en este kit en sus vídeos y publicaciones.",
+    "pt-br": "Criadores podem usar todo o conteúdo deste kit em seus vídeos e posts."
+  },
+  "kit_download": {
+    "en": "Download the kit",
+    "ru": "Скачать пресс-кит",
+    "zh": "下载资料包",
+    "ja": "キットをダウンロード",
+    "de": "Kit herunterladen",
+    "es": "Descargar el kit",
+    "pt-br": "Baixar o kit"
+  },
+  "kit_all": {
+    "en": "All languages",
+    "ru": "Все языки",
+    "zh": "所有语言",
+    "ja": "すべての言語",
+    "de": "Alle Sprachen",
+    "es": "Todos los idiomas",
+    "pt-br": "Todos os idiomas"
+  },
+  "kit_trailer": {
+    "en": "Trailer",
+    "ru": "Трейлер",
+    "zh": "预告片",
+    "ja": "トレーラー",
+    "de": "Trailer",
+    "es": "Tráiler",
+    "pt-br": "Trailer"
+  },
+  "kit_factsheet": {
+    "en": "Fact sheet",
+    "ru": "Справка об игре",
+    "zh": "游戏概况",
+    "ja": "ファクトシート",
+    "de": "Factsheet",
+    "es": "Ficha técnica",
+    "pt-br": "Ficha técnica"
+  },
+  "kit_contents": {
+    "en": "Logo and capsules, 12 screenshots, 3 GIFs, the trailer and a fact sheet.",
+    "ru": "Логотип и капсулы, 12 скриншотов, 3 GIF, трейлер и справка об игре.",
+    "zh": "徽标与封面图、12张截图、3个GIF、预告片和游戏概况。",
+    "ja": "ロゴとカプセル画像、スクリーンショット12枚、GIF 3点、トレーラー、ファクトシート。",
+    "de": "Logo und Capsules, 12 Screenshots, 3 GIFs, der Trailer und ein Factsheet.",
+    "es": "Logo y cápsulas, 12 capturas, 3 GIF, el tráiler y una ficha técnica.",
+    "pt-br": "Logo e cápsulas, 12 capturas de tela, 3 GIFs, o trailer e uma ficha técnica."
+  },
+  "fs_name": {
+    "en": "Name",
+    "ru": "Название",
+    "zh": "名称",
+    "ja": "タイトル",
+    "de": "Name",
+    "es": "Nombre",
+    "pt-br": "Nome"
+  },
+  "fs_developer": {
+    "en": "Developer",
+    "ru": "Разработчик",
+    "zh": "开发商",
+    "ja": "開発",
+    "de": "Entwickler",
+    "es": "Desarrollador",
+    "pt-br": "Desenvolvedora"
+  },
+  "fs_publisher": {
+    "en": "Publisher",
+    "ru": "Издатель",
+    "zh": "发行商",
+    "ja": "パブリッシャー",
+    "de": "Publisher",
+    "es": "Editor",
+    "pt-br": "Distribuidora"
+  },
+  "fs_platform": {
+    "en": "Platform",
+    "ru": "Платформа",
+    "zh": "平台",
+    "ja": "プラットフォーム",
+    "de": "Plattform",
+    "es": "Plataforma",
+    "pt-br": "Plataforma"
+  },
+  "fs_steam": {
+    "en": "Steam",
+    "ru": "Steam",
+    "zh": "Steam",
+    "ja": "Steam",
+    "de": "Steam",
+    "es": "Steam",
+    "pt-br": "Steam"
+  },
+  "fs_release": {
+    "en": "Release date",
+    "ru": "Дата выхода",
+    "zh": "发售日期",
+    "ja": "発売日",
+    "de": "Erscheinungsdatum",
+    "es": "Fecha de lanzamiento",
+    "pt-br": "Data de lançamento"
+  },
+  "fs_tba": {
+    "en": "To be announced",
+    "ru": "Будет объявлена",
+    "zh": "待定",
+    "ja": "未定",
+    "de": "Wird noch bekannt gegeben",
+    "es": "Por anunciar",
+    "pt-br": "A ser anunciada"
+  },
+  "fs_short": {
+    "en": "Short description",
+    "ru": "Краткое описание",
+    "zh": "简介",
+    "ja": "概要",
+    "de": "Kurzbeschreibung",
+    "es": "Descripción breve",
+    "pt-br": "Descrição curta"
+  },
+  "fs_about": {
+    "en": "About this game",
+    "ru": "Об этой игре",
+    "zh": "关于这款游戏",
+    "ja": "このゲームについて",
+    "de": "Über dieses Spiel",
+    "es": "Acerca de este juego",
+    "pt-br": "Sobre este jogo"
+  },
+  "fs_figures": {
+    "en": "30+ elite units, 90+ weapons, 140+ items",
+    "ru": "30+ элитных бойцов, 90+ видов оружия, 140+ предметов",
+    "zh": "30+ 个精锐兵种，90+ 种武器，140+ 种道具",
+    "ja": "30+の精鋭兵、90+の武器、140+のアイテム",
+    "de": "30+ Elitesoldaten, 90+ Waffen, 140+ Gegenstände",
+    "es": "30+ unidades de élite, 90+ armas, 140+ objetos",
+    "pt-br": "30+ unidades de elite, 90+ armas, 140+ itens"
+  }
+}

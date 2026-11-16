@@ -1,0 +1,4 @@
+{
+  "open": false,
+  "_note": "THE PLAYTEST SWITCH. false = the site is true today: no Discord link, no Request Access line, no playtest wording; the only call to action is Wishlist on Steam. To open the playtest: set open to true, run  python tools/playtest_switch.py  , then python tools/check_site.py , and commit the result as one small commit."
+}

@@ -1,0 +1,4 @@
+media-kit/*.txt -text
+*.zip binary
+*.mp4 binary
+*.gif binary
