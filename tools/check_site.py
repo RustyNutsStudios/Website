@@ -177,6 +177,11 @@ for f in pages:
 for f in ("eggregious.html", "faq.html", "devlog.html"):
     need(f, "tiktok.com/@playeggregious", "the game's TikTok link (@playeggregious)")
 
+# ---- the studio TikTok (@rustynutsstudios) is a dead account: it stays off the site until Tommy names a live handle ----
+for f in pages:
+    if "tiktok.com/@rustynutsstudios" in raw[f]:
+        fail(f"{f}: links the dead studio TikTok (@rustynutsstudios)")
+
 # ---- X is closed for good: no link, icon, handle or share button on any page ----
 X_PATTERN = re.compile(r"x\.com|twitter\.com|X / Twitter|\bon X\b|share on|tweet|RustyNutsStudio\b|M18\.244 2\.25")
 for f in pages:
