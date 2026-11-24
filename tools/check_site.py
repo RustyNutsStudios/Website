@@ -170,6 +170,13 @@ if "index.html" in raw:
     if "an elite team of shock troops holds the line against thousands of bugs" not in raw["index.html"]:
         fail("index.html: the About paragraph does not carry the approved clause")
 
+# ---- the game's TikTok is @playeggregious; the old handle is a dead account ----
+for f in pages:
+    if "tiktok.com/@eggregiousgame" in raw[f]:
+        fail(f"{f}: links the dead TikTok handle @eggregiousgame (the game's TikTok is @playeggregious)")
+for f in ("eggregious.html", "faq.html", "devlog.html"):
+    need(f, "tiktok.com/@playeggregious", "the game's TikTok link (@playeggregious)")
+
 # ---- X is closed for good: no link, icon, handle or share button on any page ----
 X_PATTERN = re.compile(r"x\.com|twitter\.com|X / Twitter|\bon X\b|share on|tweet|RustyNutsStudio\b|M18\.244 2\.25")
 for f in pages:
