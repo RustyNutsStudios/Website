@@ -40,4 +40,4 @@ Own game art only. No boss count. No other games' names on the translated pages.
 
 ## Trailer and size
 
-The trailer is the existing 9.2 MB copy (`19 TRAILERS\EGGREGIOUS_main_trailer_30s_v2_UNDER10MB.mp4`), copied byte for byte to `media/trailer/` and used once by the pages and by every kit zip. Each language zip is about 25 MB, the zip of everything about 42 MB.
+The trailer is trailer 1, the main trailer (v1), as the existing 9.3 MB web copy (`19 TRAILERS\EGGREGIOUS_main_trailer_30s_v1_UNDER10MB.mp4`), copied byte for byte to `media/trailer/eggregious-trailer-30s-v1.mp4` with its poster (`..._v1_THUMB.jpg`, copied to `eggregious-trailer-30s-v1-poster.jpg`). It is used once by the pages and by every kit zip. v2 was dropped on 24 Nov 2026; do not put it back. Each language zip is about 25 MB, the zip of everything about 42 MB.

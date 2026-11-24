@@ -35,9 +35,11 @@ WORK = Path(__file__).resolve().parent / "_work"
 OUT_IMG = L.ROOT / "images" / "eggregious" / "i18n"
 OUT_GIF = L.ROOT / "media" / "gifs"
 OUT_KIT = L.ROOT / "media-kit"
-TRAILER = L.ROOT / "media" / "trailer" / "eggregious-trailer-30s-1080p.mp4"
+TRAILER = L.ROOT / "media" / "trailer" / "eggregious-trailer-30s-v1.mp4"
+POSTER = L.ROOT / "media" / "trailer" / "eggregious-trailer-30s-v1-poster.jpg"
 # The trailer is the copy that already exists (same cut, 9.2 MB), used once by the page and the kits. No re-encode.
-TRAILER_SRC = ART / "19 TRAILERS" / "EGGREGIOUS_main_trailer_30s_v2_UNDER10MB.mp4"
+TRAILER_SRC = ART / "19 TRAILERS" / "EGGREGIOUS_main_trailer_30s_v1_UNDER10MB.mp4"
+POSTER_SRC = ART / "19 TRAILERS" / "EGGREGIOUS_main_trailer_30s_v1_THUMB.jpg"
 LOOSE = L.ROOT / "media-kit" / "en"   # the English kit unzipped, for the press page's direct links
 PREVIEW = {  # web previews of the English capsule set, for the press page
     "header_920x430.jpg": "press-header-capsule.jpg",
@@ -82,6 +84,7 @@ def main():
     # 3b. the trailer: the existing under-10-MB copy, byte for byte
     TRAILER.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(TRAILER_SRC, TRAILER)
+    shutil.copyfile(POSTER_SRC, POSTER)
 
     # 3c. the English kit unzipped (press page links) and web previews of the English capsule set
     if LOOSE.exists():

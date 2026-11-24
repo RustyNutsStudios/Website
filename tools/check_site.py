@@ -9,6 +9,7 @@ The playtest switch (tools/playtest.json) decides what the pages must and must n
 
 Exit code 1 if anything FAILs. WARNs do not fail.
 """
+import hashlib
 import html as htmllib
 import json
 import os
@@ -418,6 +419,34 @@ else:
     total_kit += za.stat().st_size
 if not trailer.exists() or trailer.stat().st_size > 95 * 1024 * 1024:
     fail("trailer missing or over 95 MB")
+
+# ---- the main trailer is V1 (Tommy, 24 Nov 2026): v2 must not come back anywhere ----
+# MD5 of EGGREGIOUS_main_trailer_30s_v1_UNDER10MB.mp4 (the web copy of trailer 1). Change it only when Tommy picks a new trailer.
+TRAILER_V1_MD5 = "5071030d79b116209ff6892d163e0cf4"
+if L.TRAILER_REL != "media/trailer/eggregious-trailer-30s-v1.mp4":
+    fail(f"trailer path is not the v1 file: {L.TRAILER_REL}")
+if trailer.exists() and hashlib.md5(trailer.read_bytes()).hexdigest() != TRAILER_V1_MD5:
+    fail("media/trailer: the site trailer is not the v1 cut")
+if not (ROOT / L.POSTER_REL).exists():
+    fail("media/trailer: the v1 poster is missing")
+for old in ("media/trailer/eggregious-trailer-30s-1080p.mp4", "media/trailer/eggregious-trailer-poster.jpg"):
+    if (ROOT / old).exists():
+        fail(f"{old}: the v2 trailer or poster is still in the repo")
+_tdir = ROOT / "media" / "trailer"
+if _tdir.exists() and sorted(p.name for p in _tdir.iterdir()) != sorted(Path(x).name for x in (L.TRAILER_REL, L.POSTER_REL)):
+    fail("media/trailer holds a file other than the v1 trailer and its poster")
+for _f in sorted(ROOT.glob("*.html")):
+    _t = _f.read_text(encoding="utf-8")
+    if "1080p.mp4" in _t or "trailer_30s_v2" in _t or "trailer-poster.jpg" in _t:
+        fail(f"{_f.name}: still points at the old v2 trailer or poster")
+    for _m in re.findall(r'(?:src|href|poster)="(media/trailer/[^"]+)"', _t):
+        if _m not in (L.TRAILER_REL, L.POSTER_REL):
+            fail(f"{_f.name}: trailer link {_m} is not the v1 trailer or poster")
+for _zp in sorted(kit_dir.glob("eggregious-media-kit-*.zip")):
+    _z = zipfile.ZipFile(_zp)
+    for _n in _z.namelist():
+        if _n.endswith(".mp4") and hashlib.md5(_z.read(_n)).hexdigest() != TRAILER_V1_MD5:
+            fail(f"{_zp.name}: the trailer inside is not the v1 cut ({_n})")
 for p in ROOT.rglob("*"):
     if p.is_file() and ".git" not in p.parts and p.stat().st_size > 95 * 1024 * 1024:
         fail(f"file over 95 MB (GitHub refuses 100 MB): {p.relative_to(ROOT)}")

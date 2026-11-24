@@ -74,7 +74,8 @@ _STRINGS.pop("_note", None)
 # Developer and publisher, exactly as the Steam page shows them. They appear on every language page.
 DEVELOPER = "Tommy Allen"
 PUBLISHER = "Rusty Nuts Studios LLC"
-TRAILER_REL = "media/trailer/eggregious-trailer-30s-1080p.mp4"
+TRAILER_REL = "media/trailer/eggregious-trailer-30s-v1.mp4"
+POSTER_REL = "media/trailer/eggregious-trailer-30s-v1-poster.jpg"
 
 
 def playtest_open():

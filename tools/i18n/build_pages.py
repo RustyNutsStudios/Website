@@ -20,8 +20,8 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght
          "&family=Barlow+Condensed:wght@400;600;700&display=swap")
 FONT_RU = "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
 KIT_ALL = "media-kit/eggregious-media-kit-all.zip"
-TRAILER = "media/trailer/eggregious-trailer-30s-1080p.mp4"
-POSTER = "media/trailer/eggregious-trailer-poster.jpg"
+TRAILER = "media/trailer/eggregious-trailer-30s-v1.mp4"
+POSTER = "media/trailer/eggregious-trailer-30s-v1-poster.jpg"
 
 
 def esc(x):
