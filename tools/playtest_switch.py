@@ -66,7 +66,7 @@ def faq_jsonld(open_):
     qs += [
         ("Can I stream it or make videos?", "To be announced."),
         ("Who makes it?", "Tommy Allen at Rusty Nuts Studios, a solo studio in Tbilisi, Georgia, in Unreal Engine 5. Publisher: Rusty Nuts Studios LLC."),
-        ("Where do I follow it?", "EGGREGIOUS on TikTok, Instagram and YouTube (@eggregiousgame), the studio on X (@RustyNutsStudio), the wishlist on Steam, and the devlog on this site."),
+        ("Where do I follow it?", "EGGREGIOUS on TikTok, Instagram and YouTube (@eggregiousgame), the wishlist on Steam, and the devlog on this site."),
     ]
     rows = ",\n".join(
         '{"@type":"Question","name":' + json.dumps(n, ensure_ascii=False) + ',"acceptedAnswer":{"@type":"Answer","text":' + json.dumps(t, ensure_ascii=False) + "}}"

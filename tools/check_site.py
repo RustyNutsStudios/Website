@@ -170,6 +170,13 @@ if "index.html" in raw:
     if "an elite team of shock troops holds the line against thousands of bugs" not in raw["index.html"]:
         fail("index.html: the About paragraph does not carry the approved clause")
 
+# ---- X is closed for good: no link, icon, handle or share button on any page ----
+X_PATTERN = re.compile(r"x\.com|twitter\.com|X / Twitter|\bon X\b|share on|tweet|RustyNutsStudio\b|M18\.244 2\.25")
+for f in pages:
+    m = X_PATTERN.search(raw[f])
+    if m:
+        fail(f"{f}: an X / Twitter trace is on the page ({m.group(0)})")
+
 # ---- old EGGREGIOUS pictures must not creep back onto any page ----
 for f in pages:
     if "capsule-vertical-748.jpg" in raw[f]:

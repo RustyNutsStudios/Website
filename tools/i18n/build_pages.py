@@ -390,7 +390,7 @@ def press_page():
     <div class="egg-wrap">
         <p class="section-label">Fact sheet</p>
         <h2 class="section-title">EGGREGIOUS</h2>
-        <p class="game-desc">As on the Steam page, except the contact row.</p>
+        <p class="game-desc">As on the Steam page.</p>
         <table class="press-table">
             <tr><th>Title</th><td>EGGREGIOUS</td></tr>
             <tr><th>Developer</th><td>{L.DEVELOPER}</td></tr>
@@ -400,7 +400,6 @@ def press_page():
             <tr><th>Platform</th><td>Windows PC, on Steam.</td></tr>
             <tr><th>Release</th><td>To be announced.</td></tr>
             <tr><th>Steam</th><td><a href="{L.STEAM_BASE}?{L.UTM}" target="_blank" rel="noopener">store.steampowered.com/app/4036510</a></td></tr>
-            <tr><th>Contact</th><td><a href="https://x.com/RustyNutsStudio" target="_blank" rel="noopener">@RustyNutsStudio on X</a>.</td></tr>
         </table>
         <p class="game-desc" style="margin-top: 18px;"><a href="media-kit/fact-sheet-en.txt" download style="color: var(--egg-gold);">{esc(L.s('kit_factsheet'))} (TXT)</a></p>
     </div>
